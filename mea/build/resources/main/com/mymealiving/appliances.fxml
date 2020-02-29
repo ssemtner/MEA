@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mymealiving.Controller">
+    <children>
+        <Pane layoutX="10.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="780.0">
+            <children>
+                <Rectangle arcHeight="50.0" arcWidth="20.0" fill="#423f3f" height="20.0" layoutX="700.0" layoutY="5.0" stroke="TRANSPARENT" strokeType="INSIDE" width="60.0" />
+                <Label fx:id="clock" layoutX="20.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="600.0" minHeight="-Infinity" prefHeight="20.0" prefWidth="300.0">
+                    <font>
+                        <Font name="Calibri" size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <StackPane layoutX="20.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="300.0">
+            <children>
+                <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#f1f3f4" height="350.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="300.0">
+               <effect>
+                  <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
+               </effect></Rectangle>
+                <TilePane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="300.0">
+               <children>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="300.0">
+                     <children>
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="150.0" text="Lights">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox>
+                     <children>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="300.0">
+                           <children>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="150.0" text="Living Room">
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <StackPane onMouseClicked="#toggle_light">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Rectangle arcHeight="50.0" arcWidth="40.0" fill="#f1935c" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="100.0" />
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" text="ON">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                        <Line endX="125.0" startX="-125.0" stroke="#aeafb0">
+                           <VBox.margin>
+                              <Insets left="25.0" right="25.0" />
+                           </VBox.margin>
+                        </Line>
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="300.0">
+                           <children>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="150.0" text="Kitchen">
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <StackPane onMouseClicked="#toggle_light">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Rectangle arcHeight="50.0" arcWidth="40.0" fill="#f1935c" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="100.0" />
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" text="ON">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                        <Line endX="125.0" startX="-125.0" stroke="#aeafb0">
+                           <VBox.margin>
+                              <Insets left="25.0" right="25.0" />
+                           </VBox.margin>
+                        </Line>
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="300.0">
+                           <children>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="150.0" text="Dining Room">
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <StackPane onMouseClicked="#toggle_light">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Rectangle arcHeight="50.0" arcWidth="40.0" fill="#f1935c" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="100.0" />
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" text="ON">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                        <Line endX="125.0" startX="-125.0" stroke="#aeafb0">
+                           <VBox.margin>
+                              <Insets left="25.0" right="25.0" />
+                           </VBox.margin>
+                        </Line>
+                     </children>
+                  </VBox>
+                  <StackPane>
+                     <TilePane.margin>
+                        <Insets bottom="30.0" right="120.0" />
+                     </TilePane.margin>
+                     <children>
+                        <Rectangle arcHeight="40.0" arcWidth="30.0" fill="#e6e6f1" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="120.0" />
+                        <Label text="ADD LIGHT">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+               </children></TilePane>
+            </children>
+        </StackPane>
+      <StackPane layoutX="480.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="300.0">
+         <children>
+            <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#f1f3f4" height="350.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="300.0">
+               <effect>
+                  <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
+               </effect>
+            </Rectangle>
+            <TilePane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="300.0">
+               <children>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="300.0">
+                     <children>
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="150.0" text="Blinds">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox>
+                     <children>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="300.0">
+                           <children>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="150.0" text="Bedroom">
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <StackPane onMouseClicked="#toggle_blinds">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Rectangle arcHeight="50.0" arcWidth="40.0" fill="#f1935c" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="100.0" />
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" text="OPEN">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                        <Line endX="125.0" startX="-125.0" stroke="#aeafb0">
+                           <VBox.margin>
+                              <Insets left="25.0" right="25.0" />
+                           </VBox.margin>
+                        </Line>
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="300.0">
+                           <children>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="150.0" text="Kitchen">
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <StackPane onMouseClicked="#toggle_blinds">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Rectangle arcHeight="50.0" arcWidth="40.0" fill="#f1935c" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="100.0" />
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" text="OPEN">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                        <Line endX="125.0" startX="-125.0" stroke="#aeafb0">
+                           <VBox.margin>
+                              <Insets left="25.0" right="25.0" />
+                           </VBox.margin>
+                        </Line>
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="300.0">
+                           <children>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="150.0" text="Dining Room">
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <StackPane onMouseClicked="#toggle_blinds">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Rectangle arcHeight="50.0" arcWidth="40.0" fill="#f1935c" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="100.0" />
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" text="OPEN">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                        <Line endX="125.0" startX="-125.0" stroke="#aeafb0">
+                           <VBox.margin>
+                              <Insets left="25.0" right="25.0" />
+                           </VBox.margin>
+                        </Line>
+                     </children>
+                  </VBox>
+                  <StackPane>
+                     <TilePane.margin>
+                        <Insets bottom="30.0" right="120.0" />
+                     </TilePane.margin>
+                     <children>
+                        <Rectangle arcHeight="40.0" arcWidth="30.0" fill="#e6e6f1" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="120.0" />
+                        <Label text="ADD LIGHT">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+               </children>
+            </TilePane>
+         </children>
+      </StackPane>
+        <Rectangle arcHeight="60.0" arcWidth="30.0" fill="#e2ae35" height="40.0" layoutX="350.0" layoutY="433.0" onMouseClicked="#home" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+      <StackPane layoutX="325.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#emergency_show" prefHeight="40.0" prefWidth="150.0">
+         <children>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#b7472a" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7472a" height="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0">
+               <StackPane.margin>
+                  <Insets bottom="11.0" />
+               </StackPane.margin>
+            </Rectangle>
+            <Label text="EMERGENCY">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe856" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="OUTSIDE" width="800.0" />
+      <Label layoutX="23.0" layoutY="40.0" prefHeight="60.0" text="Appliances">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <Pane fx:id="popup" mouseTransparent="true">
+         <children>
+            <Rectangle fill="#ffffffd9" height="480.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="800.0" />
+            <StackPane layoutX="300.0" layoutY="365.0" onMouseClicked="#emergency_hide">
+               <children>
+                  <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#e6e6f1" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0">
+                     <effect>
+                        <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
+                     </effect>
+                  </Rectangle>
+                  <Label text="CANCEL">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane layoutX="320.0" layoutY="40.0">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#b7472a" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="160.0" />
+                  <Label text="CALL 911">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+         </children>
+      </Pane>
+    </children>
+</Pane>
