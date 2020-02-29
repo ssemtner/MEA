@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" styleClass="main" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mymealiving.Controller">
+<Pane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mymealiving.Controller">
     <children>
         <Pane layoutX="10.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="780.0">
             <children>
@@ -303,7 +303,7 @@
          </children>
       </StackPane>
         <Rectangle arcHeight="60.0" arcWidth="30.0" fill="#e2ae35" height="40.0" layoutX="350.0" layoutY="433.0" onMouseClicked="#home" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
-      <StackPane layoutX="325.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#emergency" prefHeight="40.0" prefWidth="150.0">
+      <StackPane layoutX="325.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#emergency_show" prefHeight="40.0" prefWidth="150.0">
          <children>
             <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#b7472a" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7472a" height="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0">
@@ -324,5 +324,34 @@
             <Font name="System Bold" size="38.0" />
          </font>
       </Label>
+      <Pane fx:id="popup" mouseTransparent="true">
+         <children>
+            <Rectangle fill="#ffffffd9" height="480.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="800.0" />
+            <StackPane layoutX="300.0" layoutY="365.0" onMouseClicked="#emergency_hide">
+               <children>
+                  <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#e6e6f1" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0">
+                     <effect>
+                        <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
+                     </effect>
+                  </Rectangle>
+                  <Label text="CANCEL">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane layoutX="320.0" layoutY="40.0">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#b7472a" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="160.0" />
+                  <Label text="CALL 911">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+         </children>
+      </Pane>
     </children>
 </Pane>
