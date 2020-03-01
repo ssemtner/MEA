@@ -28,7 +28,6 @@ public class Controller {
 
     @FXML
     void appliances(MouseEvent event) throws Exception {
-        System.out.println("change to appliances");
         MainApp.changeScene(event, "appliances.fxml", "style.css", "Appliances (MEA)");
     }
 
@@ -43,8 +42,8 @@ public class Controller {
     }
 
     @FXML
-    void news(MouseEvent event) {
-        System.out.println("hello");
+    void news(MouseEvent event) throws Exception {
+        MainApp.changeScene(event, "news.fxml", "style.css", "News (MEA)");
     }
 
     @FXML
@@ -64,7 +63,6 @@ public class Controller {
             date.set(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(today.get()));
             time.set(formatter.format(today.get()));
             clock.setText(time + "\t" + date);
-            System.out.println(time + "\t" + date);
         }));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
