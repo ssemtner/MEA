@@ -33,8 +33,8 @@ public class Controller {
     }
 
     @FXML
-    void doors(MouseEvent event) {
-        System.out.println("hello");
+    void doors(MouseEvent event) throws Exception {
+        MainApp.changeScene(event, "doors.fxml", "style.css", "Kitchen (MEA)");
     }
 
     @FXML
@@ -94,7 +94,10 @@ public class Controller {
         toggle(event, "OPEN", "#F1935C", "CLOSED", "#B7472A");
     }
 
-    public void kitchen_toggle(MouseEvent event) {
+    public void toggle_kitchen(MouseEvent event) {
+    }
+
+    public void toggle_door(MouseEvent event) {
     }
 
     @FXML

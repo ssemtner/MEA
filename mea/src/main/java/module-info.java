@@ -1,4 +1,4 @@
-module hellofx {
+module mea {
     requires javafx.controls;
     requires javafx.fxml;
 

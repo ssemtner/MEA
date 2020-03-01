@@ -38,8 +38,8 @@
                 </Label>
             </children>
         </StackPane>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bde07f" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="OUTSIDE" width="800.0" />
-        <Label layoutX="23.0" layoutY="40.0" prefHeight="60.0" text="Kitchen">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#de8670" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="OUTSIDE" width="800.0" />
+        <Label layoutX="23.0" layoutY="40.0" prefHeight="60.0" text="Doors">
             <font>
                 <Font name="System Bold" size="38.0" />
             </font>
@@ -55,7 +55,7 @@
                   </Rectangle>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="160.0" text="Stove">
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="160.0" text="Front Door">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -63,17 +63,17 @@
                               <Font name="System Bold" size="24.0" />
                            </font>
                         </Label>
-                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#toggle_kitchen" prefHeight="60.0" prefWidth="130.0">
+                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#toggle_door" prefHeight="60.0" prefWidth="130.0">
                            <HBox.margin>
                               <Insets left="180.0" />
                            </HBox.margin>
                            <children>
-                              <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#b7472a" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0">
+                              <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#f1935c" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0">
                                  <effect>
                                     <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
                                  </effect>
                               </Rectangle>
-                              <Label text="DANGER">
+                              <Label text="CLOSED">
                                  <font>
                                     <Font name="System Bold" size="24.0" />
                                  </font>
@@ -96,7 +96,7 @@
                   </Rectangle>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="160.0" text="Microwave">
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="160.0" text="Back Door">
                            <padding>
                               <Insets left="10.0" />
                            </padding>
@@ -104,17 +104,17 @@
                               <Font name="System Bold" size="24.0" />
                            </font>
                         </Label>
-                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#toggle_kitchen" prefHeight="60.0" prefWidth="130.0">
+                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#toggle_door" prefHeight="60.0" prefWidth="130.0">
                            <HBox.margin>
                               <Insets left="180.0" />
                            </HBox.margin>
                            <children>
-                              <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#b7472a" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0">
+                              <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#f1935c" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0">
                                  <effect>
                                     <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
                                  </effect>
                               </Rectangle>
-                              <Label text="DANGER">
+                              <Label text="CLOSED">
                                  <font>
                                     <Font name="System Bold" size="24.0" />
                                  </font>
@@ -128,7 +128,7 @@
                   <Insets bottom="20.0" />
                </TilePane.margin>
             </StackPane>
-            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="220.0">
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#toggle_door" prefHeight="60.0" prefWidth="220.0">
                <TilePane.margin>
                   <Insets right="180.0" />
                </TilePane.margin>
@@ -138,7 +138,7 @@
                         <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
                      </effect>
                   </Rectangle>
-                  <Label text="ADD APPLIANCE">
+                  <Label text="ADD DOOR">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
