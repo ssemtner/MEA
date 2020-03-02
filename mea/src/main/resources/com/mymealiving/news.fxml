@@ -36,7 +36,7 @@
             </Label>
          </children>
       </StackPane>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe856" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="OUTSIDE" width="800.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8286ea" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="OUTSIDE" width="800.0" />
       <Label layoutX="23.0" layoutY="40.0" prefHeight="60.0" text="News">
          <font>
             <Font name="System Bold" size="38.0" />

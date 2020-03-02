@@ -22,8 +22,6 @@ public class Controller {
     @FXML
     private Label clock = new Label();
     @FXML
-    private Pane main = new Pane();
-    @FXML
     private Pane popup = new Pane();
 
     @FXML
@@ -69,13 +67,13 @@ public class Controller {
     }
 
     @FXML
-    public void emergency_show(MouseEvent event) {
+    public void emergency_show() {
         popup.setVisible(true);
         popup.setMouseTransparent(false);
     }
 
     @FXML
-    public void emergency_hide(MouseEvent event) {
+    public void emergency_hide() {
         popup.setVisible(false);
         popup.setMouseTransparent(true);
     }
@@ -84,7 +82,7 @@ public class Controller {
         MainApp.changeScene(mouseEvent, "home.fxml", "style.css", "MEA");
     }
 
-    public void toggle_light(MouseEvent event) {
+    public static void toggle_light(MouseEvent event) {
         toggle(event, "ON", "#F1935C", "OFF", "#B7472A");
     }
 
@@ -92,10 +90,10 @@ public class Controller {
         toggle(event, "OPEN", "#F1935C", "CLOSED", "#B7472A");
     }
 
-    public void toggle_kitchen(MouseEvent event) {
+    public void toggle_kitchen() {
     }
 
-    public void toggle_door(MouseEvent event) {
+    public void toggle_door() {
     }
 
     @FXML
