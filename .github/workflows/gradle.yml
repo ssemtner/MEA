@@ -25,13 +25,10 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew jlink
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v1
+    - name: Download artifact
+      uses: actions/download-artifact@v1.0.0
       with:
-        name: dist
-        path: dist
-    - name: Archive code coverage results
-      uses: actions/upload-artifact@v1
-      with:
-        name: code-coverage-report
-        path: output/test/code-coverage.html
+        # Artifact name
+        name: mea
+        # Destination path
+        path: /output/jlink
