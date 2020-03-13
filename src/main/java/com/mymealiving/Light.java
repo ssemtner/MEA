@@ -39,7 +39,7 @@ public class Light {
         text.setFont(Font.font("System", FontWeight.BOLD, 18));
 
         StackPane stackpane = new StackPane();
-        stackpane.setPadding(new Insets(10, 0, 10, 20));
+        stackpane.setPadding(new Insets(10, 0, 10, 120));
         stackpane.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> Controller.toggle(event, "ON", "#F1935C", "OFF", "#B7472A"));
 
         Rectangle rectangle = new Rectangle();
