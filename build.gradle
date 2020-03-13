@@ -16,7 +16,6 @@ javafx {
 mainClassName = "$moduleName/com.mymealiving.MainApp"
 
 jlink {
-    targetPlatform('linux-arm32', 'C:/Users/sjsem/Documents/raspi_java/jdk/')
     options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
     launcher {
         name = 'mea'
