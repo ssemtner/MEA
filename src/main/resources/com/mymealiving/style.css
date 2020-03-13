@@ -1,0 +1,11 @@
+.main {
+    -fx-background-color: #F1F3F4;
+}
+
+.home {
+    -fx-background-radius: 15;
+}
+
+ScrollPane {
+    -fx-background-color: transparent;
+}
