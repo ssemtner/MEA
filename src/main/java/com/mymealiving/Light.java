@@ -24,22 +24,22 @@ public class Light {
         VBox vbox = new VBox();
 
         HBox hbox = new HBox();
-        hbox.setMaxWidth(300);
-        hbox.setMinWidth(300);
+        hbox.setMaxWidth(400);
+        hbox.setMinWidth(400);
         hbox.setMaxHeight(60);
         hbox.setMinHeight(60);
 
         Label text = new Label();
         text.setText(MainApp.toDisplayCase(name));
-        text.setMaxWidth(150);
-        text.setMinWidth(150);
+        text.setMaxWidth(250);
+        text.setMinWidth(250);
         text.setMaxHeight(60);
         text.setMinHeight(60);
         text.setPadding(new Insets(0, 0, 0, 30));
         text.setFont(Font.font("System", FontWeight.BOLD, 18));
 
         StackPane stackpane = new StackPane();
-        stackpane.setPadding(new Insets(10, 0, 10, 120));
+        stackpane.setPadding(new Insets(10, 0, 10, 20));
         stackpane.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> Controller.toggle(event, "ON", "#F1935C", "OFF", "#B7472A"));
 
         Rectangle rectangle = new Rectangle();
@@ -58,7 +58,7 @@ public class Light {
         Line line = new Line();
         line.setStartX(-125);
         line.setStartY(0);
-        line.setEndX(125);
+        line.setEndX(175);
         line.setEndY(0);
         line.setTranslateX(25);
         line.setStroke(Color.web("aeafb0"));

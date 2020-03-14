@@ -37,7 +37,7 @@ public class MainApp extends Application {
 
         stage.setTitle("MEA");
         stage.setScene(scene);
-        stage.setFullScreen(true);
+//        stage.setFullScreen(true);
         stage.show();
     }
 }

@@ -144,7 +144,7 @@
                     </padding>
                 </Label>
                 <ScrollPane hbarPolicy="NEVER" hmax="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="400.0" vbarPolicy="NEVER">
-                    <TilePane fx:id="lights" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="290.0" minWidth="-Infinity" prefHeight="1000.0" prefWidth="300.0">
+                    <TilePane fx:id="lights" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="290.0" minWidth="-Infinity" prefHeight="1000.0" prefWidth="400.0">
                     </TilePane>
                 </ScrollPane>
             </VBox>
@@ -181,7 +181,7 @@
                     </padding>
                 </Label>
                 <ScrollPane hbarPolicy="NEVER" hmax="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="400.0" vbarPolicy="NEVER">
-                    <TilePane fx:id="blinds" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="290.0" minWidth="-Infinity" prefHeight="1000.0" prefWidth="300.0" />
+                    <TilePane fx:id="blinds" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="290.0" minWidth="-Infinity" prefHeight="1000.0" prefWidth="400.0" />
                 </ScrollPane>
             </VBox>
         </StackPane>
