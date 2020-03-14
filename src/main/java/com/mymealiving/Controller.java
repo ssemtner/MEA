@@ -4,6 +4,7 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -21,31 +22,16 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Controller {
 
     @FXML
-    public Pane home;
+    private Pane home, kitchen, appliances, doors_pane, news, main, popup;
     @FXML
-    public Pane kitchen;
+    private TilePane lights, blinds, kitchen_appliances, doors;
     @FXML
-    public Pane appliances;
+    private Label clock;
     @FXML
-    public Pane doors_pane;
+    private StackPane emergency_button;
     @FXML
-    public Pane news;
-    @FXML
-    public Pane main;
-    @FXML
-    public TilePane lights = new TilePane();
-    @FXML
-    public TilePane blinds = new TilePane();
-    @FXML
-    public TilePane kitchen_appliances = new TilePane();
-    @FXML
-    public TilePane doors = new TilePane();
-    @FXML
-    private Label clock = new Label();
-    @FXML
-    private Pane popup = new Pane();
+    private Rectangle home_button;
 
-    @FXML
     static void toggle(MouseEvent event, String text1, String color1, String text2, String color2) {
         StackPane pane = (StackPane) event.getSource();
         Rectangle rect = (Rectangle) pane.getChildren().get(0);
@@ -60,7 +46,7 @@ public class Controller {
         }
     }
 
-    static void switchPane(Pane on, Pane off1, Pane off2, Pane off3, Pane off4) {
+    static void switchPane(Node on, Node off1, Node off2, Node off3, Node off4, Node home_button, Node emergency_button) {
         on.setVisible(true);
         on.setMouseTransparent(false);
         off1.setVisible(false);
@@ -71,35 +57,49 @@ public class Controller {
         off3.setMouseTransparent(true);
         off4.setVisible(false);
         off4.setMouseTransparent(true);
+
+        if (on.getId().equals("home")) {
+            emergency_button.setVisible(false);
+            emergency_button.setMouseTransparent(true);
+            home_button.setVisible(false);
+            home_button.setMouseTransparent(true);
+        }
+        else {
+            emergency_button.setVisible(true);
+            emergency_button.setMouseTransparent(false);
+            home_button.setVisible(true);
+            home_button.setMouseTransparent(false);
+        }
     }
 
     @FXML
     void appliances() {
-        switchPane(appliances, home, doors_pane, kitchen, news);
+        switchPane(appliances, home, doors_pane, kitchen, news, home_button, emergency_button);
     }
 
     @FXML
     void doors() {
-        switchPane(doors_pane, appliances, home, kitchen, news);
+        switchPane(doors_pane, appliances, home, kitchen, news, home_button, emergency_button);
     }
 
     @FXML
     void kitchen() {
-        switchPane(kitchen, appliances, doors_pane, home, news);
+        switchPane(kitchen, appliances, doors_pane, home, news, home_button, emergency_button);
     }
 
     @FXML
     void news() {
-        switchPane(news, appliances, doors_pane, kitchen, home);
+        switchPane(news, appliances, doors_pane, kitchen, home, home_button, emergency_button);
     }
 
-    public void home() {
-        switchPane(home, appliances, doors_pane, kitchen, news);
+    @FXML
+    void home() {
+        switchPane(home, appliances, doors_pane, kitchen, news, home_button, emergency_button);
     }
 
     @FXML
     void initialize() {
-        switchPane(home, appliances, doors_pane, kitchen, news);
+        home();
 
         blinds.getChildren().add(DEFAULTS.BEDROOM_B.getVisual());
         blinds.getChildren().add(DEFAULTS.KITCHEN_B.getVisual());

@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-@SuppressWarnings("unchecked")
 public class MainApp extends Application {
 
     public static String toDisplayCase(String s) {
@@ -38,6 +37,7 @@ public class MainApp extends Application {
 
         stage.setTitle("MEA");
         stage.setScene(scene);
+        stage.setFullScreen(true);
         stage.show();
     }
 }

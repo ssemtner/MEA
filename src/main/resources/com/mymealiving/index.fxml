@@ -3,44 +3,31 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<Pane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mymealiving.Controller">
+<Pane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="com.mymealiving.Controller">
     <Pane layoutX="10.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="1004.0">
         <Rectangle arcHeight="50.0" arcWidth="20.0" fill="#423f3f" height="20.0" layoutX="900.0" layoutY="5.0" stroke="TRANSPARENT" strokeType="INSIDE" width="60.0" />
     </Pane>
-    <Pane fx:id="kitchen" visible="false">
-        <Rectangle arcHeight="60.0" arcWidth="30.0" fill="#e2ae35" height="40.0" layoutX="350.0" layoutY="433.0" onMouseClicked="#home" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
-        <StackPane layoutX="325.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#emergency_show" prefHeight="40.0" prefWidth="150.0">
-            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#b7472a" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7472a" height="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0">
-                <StackPane.margin>
-                    <Insets bottom="11.0" />
-                </StackPane.margin>
-            </Rectangle>
-            <Label text="EMERGENCY">
-                <font>
-                    <Font name="System Bold" size="20.0" />
-                </font>
-            </Label>
-        </StackPane>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bde07f" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="OUTSIDE" width="800.0" />
-        <Label layoutX="23.0" layoutY="40.0" prefHeight="60.0" text="Kitchen">
+    <Pane fx:id="kitchen">
+        <Rectangle fill="#bde07f" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
+        <Label layoutX="40.0" layoutY="40.0" prefHeight="60.0" text="Kitchen">
             <font>
                 <Font name="System Bold" size="38.0" />
             </font>
         </Label>
-        <ScrollPane hbarPolicy="NEVER" hmax="0.0" layoutX="6.0" layoutY="106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="540.0" vbarPolicy="NEVER">
-            <TilePane fx:id="kitchen_appliances" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="520.0" vgap="10.0">
+        <ScrollPane hbarPolicy="NEVER" hmax="0.0" layoutX="6.0" layoutY="106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="700.0" vbarPolicy="NEVER">
+            <TilePane fx:id="kitchen_appliances" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" vgap="10.0">
                 <padding>
                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                 </padding>
             </TilePane>
         </ScrollPane>
-        <AnchorPane layoutX="35.0" layoutY="340.0">
+        <AnchorPane layoutX="35.0" layoutY="450.0">
             <StackPane layoutX="14.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="220.0">
                 <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#e6e6f1" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="220.0">
                     <effect>
@@ -56,22 +43,8 @@
         </AnchorPane>
     </Pane>
     <Pane fx:id="news" visible="false">
-        <Rectangle arcHeight="60.0" arcWidth="30.0" fill="#e2ae35" height="40.0" layoutX="350.0" layoutY="433.0" onMouseClicked="#home" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
-        <StackPane layoutX="325.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#emergency_show" prefHeight="40.0" prefWidth="150.0">
-            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#b7472a" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7472a" height="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0">
-                <StackPane.margin>
-                    <Insets bottom="11.0" />
-                </StackPane.margin>
-            </Rectangle>
-            <Label text="EMERGENCY">
-                <font>
-                    <Font name="System Bold" size="20.0" />
-                </font>
-            </Label>
-        </StackPane>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8286ea" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="OUTSIDE" width="800.0" />
-        <Label layoutX="23.0" layoutY="40.0" prefHeight="60.0" text="News">
+        <Rectangle fill="#8286ea" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
+        <Label layoutX="40.0" layoutY="40.0" prefHeight="60.0" text="News">
             <font>
                 <Font name="System Bold" size="38.0" />
             </font>
@@ -127,10 +100,10 @@
                     </font>
                 </Label>
             </Pane>
-            <StackPane layoutX="310.0" layoutY="145.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="120.0">
-                <Circle fill="#d55e00" onMouseClicked="#emergency_show" radius="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-                <Circle fill="#898b8d" onMouseClicked="#emergency_show" radius="55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-                <ImageView fitHeight="138.0" fitWidth="88.0" onMouseClicked="#emergency_show" pickOnBounds="true" preserveRatio="true">
+            <StackPane layoutX="310.0" layoutY="145.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#emergency_show" prefHeight="120.0" prefWidth="120.0">
+                <Circle fill="#d55e00" radius="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                <Circle fill="#898b8d" radius="55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                <ImageView fitHeight="138.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
                     <StackPane.margin>
                         <Insets top="10.0" />
                     </StackPane.margin>
@@ -139,22 +112,8 @@
             </StackPane>
         </Pane>
     </Pane>
-    <Pane fx:id="doors_pane" prefHeight="600.0" prefWidth="1024.0">
-        <Rectangle arcHeight="60.0" arcWidth="30.0" fill="#e2ae35" height="40.0" layoutX="462.0" layoutY="540.0" onMouseClicked="#home" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
-        <StackPane layoutX="325.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#emergency_show" prefHeight="40.0" prefWidth="150.0">
-            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#b7472a" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7472a" height="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0">
-                <StackPane.margin>
-                    <Insets bottom="11.0" />
-                </StackPane.margin>
-            </Rectangle>
-            <Label text="EMERGENCY">
-                <font>
-                    <Font name="System Bold" size="20.0" />
-                </font>
-            </Label>
-        </StackPane>
-        <Rectangle fill="#de8670" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="OUTSIDE" width="1024.0" />
+    <Pane fx:id="doors_pane" prefHeight="600.0" prefWidth="1024.0" visible="false">
+        <Rectangle fill="#de8670" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
         <Label layoutX="40.0" layoutY="40.0" prefHeight="60.0" text="Doors">
             <font>
                 <Font name="System Bold" size="38.0" />
@@ -190,21 +149,7 @@
                 </ScrollPane>
             </VBox>
         </StackPane>
-        <Rectangle arcHeight="60.0" arcWidth="30.0" fill="#e2ae35" height="40.0" layoutX="462.0" layoutY="540.0" onMouseClicked="#home" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
-        <StackPane layoutX="437.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#emergency_show" prefHeight="40.0" prefWidth="150.0">
-            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#b7472a" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7472a" height="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0">
-                <StackPane.margin>
-                    <Insets bottom="11.0" />
-                </StackPane.margin>
-            </Rectangle>
-            <Label text="EMERGENCY">
-                <font>
-                    <Font name="System Bold" size="20.0" />
-                </font>
-            </Label>
-        </StackPane>
-        <Rectangle fill="#ffe856" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="OUTSIDE" width="1024.0" />
+        <Rectangle fill="#ffe856" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
         <Label layoutX="40.0" layoutY="40.0" prefHeight="60.0" text="Appliances">
             <font>
                 <Font name="System Bold" size="38.0" />
@@ -250,6 +195,20 @@
              </Label>
          </StackPane>
     </Pane>
+    <Rectangle fx:id="home_button" arcHeight="60.0" arcWidth="30.0" fill="#e2ae35" height="40.0" layoutX="462.0" layoutY="540.0" onMouseClicked="#home" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+    <StackPane fx:id="emergency_button" layoutX="437.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#emergency_show" prefHeight="40.0" prefWidth="150.0">
+        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#b7472a" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7472a" height="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0">
+            <StackPane.margin>
+                <Insets bottom="11.0" />
+            </StackPane.margin>
+        </Rectangle>
+        <Label text="EMERGENCY">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+    </StackPane>
     <Label fx:id="clock" layoutX="20.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="600.0" minHeight="-Infinity" prefHeight="20.0" prefWidth="300.0">
         <font>
             <Font name="System" size="16.0" />
