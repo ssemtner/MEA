@@ -10,26 +10,42 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
-    runs-on: ARM32
-
+  windows:
+    runs-on: windows-latest
     steps:
-    - name: Update packages
-      run: sudo apt-get -y update
-    - name: Get JDK
-      run: sudo apt-get -y install openjdk-11-jdk
-    - name: Get JFX
-      run: sudo apt-get -y install openjfx
     - uses: actions/checkout@v2
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+    - name: Setup Java JDK
+      uses: actions/setup-java@v1.3.0
+      with:
+        java-version: 11
+        java-package: jdk+fx
     - name: Build with Gradle
-      run: ./gradlew jlink
+      run: gradlew jlink
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        # Artifact name
         name: mea
-        # Destination path
         path: build/image/
+  armv7:
+    runs-on: ubuntu-18.04
+    name: Build on ARMv7 
+    steps:
+      - uses: actions/checkout@v1.0.0
+      - name: Setup Java JDK
+        uses: actions/setup-java@v1.3.0
+        with:
+          java-version: 11
+          java-package: jdk+fx
+      - uses: uraimo/run-on-arch-action@v1.0.5
+        id: runcmd
+        with:
+          architecture: armv7
+          distribution: ubuntu18.04
+          run: |
+            chmod +x gradlew
+            ./gradlew jlink
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1.0.0
+        with:
+          name: mea
+          path: build/image/
