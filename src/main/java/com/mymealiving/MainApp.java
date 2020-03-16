@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class MainApp extends Application {
+    public static FXMLLoader loader;
+
 
     public static String toDisplayCase(String s) {
         final String ACTIONABLE_DELIMITERS = " '-/";
@@ -25,19 +27,25 @@ public class MainApp extends Application {
     }
 
     public static void main(String[] args) {
+        Thread thread = new Thread(() -> {
+            Server server = new Server(5050);
+            server.start();
+            server = null;
+        });
+        thread.start();
         launch(args);
     }
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("index.fxml"));
-
+        loader = new FXMLLoader(getClass().getResource("index.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 
         stage.setTitle("MEA");
         stage.setScene(scene);
-//        stage.setFullScreen(true);
+        stage.setFullScreen(true);
         stage.show();
     }
 }

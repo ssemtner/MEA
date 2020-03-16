@@ -22,7 +22,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Controller {
 
     @FXML
-    private Pane home, kitchen, appliances, doors_pane, news, main, popup;
+    private Pane home, kitchen, appliances, doors_pane, news, popup, danger;
     @FXML
     private TilePane lights, blinds, kitchen_appliances, doors;
     @FXML
@@ -99,48 +99,52 @@ public class Controller {
 
     @FXML
     void initialize() {
+        //Show home screen
         home();
+        emergency_hide();
+        //danger_hide();
 
+        //Fill in blinds
         blinds.getChildren().add(DEFAULTS.BEDROOM_B.getVisual());
         blinds.getChildren().add(DEFAULTS.KITCHEN_B.getVisual());
         blinds.getChildren().add(DEFAULTS.DINING_ROOM_B.getVisual());
         blinds.setMinHeight((blinds.getChildren().size()) * 75);
         blinds.setMaxHeight((blinds.getChildren().size()) * 75);
 
+        //Fill in kitchen appliances
         kitchen_appliances.getChildren().add(DEFAULTS.MICROWAVE.getVisual());
         kitchen_appliances.getChildren().add(DEFAULTS.STOVE.getVisual());
         kitchen_appliances.setMinHeight((kitchen_appliances.getChildren().size()) * 70);
         kitchen_appliances.setMaxHeight((kitchen_appliances.getChildren().size()) * 70);
 
+        //Fill in lights
         lights.getChildren().add(DEFAULTS.LIVING_ROOM_L.getVisual());
         lights.getChildren().add(DEFAULTS.KITCHEN_L.getVisual());
         lights.getChildren().add(DEFAULTS.DINING_ROOM_L.getVisual());
         lights.setMinHeight((lights.getChildren().size()) * 75);
         lights.setMaxHeight((lights.getChildren().size()) * 75);
 
+        //Fill in doors
         doors.getChildren().add(DEFAULTS.FRONT_DOOR.getVisual());
         doors.getChildren().add(DEFAULTS.BACK_DOOR.getVisual());
         doors.setMinHeight(doors.getChildren().size() * 70);
         doors.setMaxHeight(doors.getChildren().size() * 70);
 
-        popup.setVisible(false);
-        popup.setMouseTransparent(true);
-
+        //Start clock
         AtomicReference<LocalDateTime> today = new AtomicReference<>(LocalDateTime.now());
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm a");
         clock.setText(formatter.format(today.get()));
         AtomicReference<String> date = new AtomicReference<>(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(today.get()));
         AtomicReference<String> time = new AtomicReference<>(formatter.format(today.get()));
         clock.setText(time + "\t" + date);
-
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(15), actionEvent -> {
+        Timeline clock_timeline = new Timeline(new KeyFrame(Duration.seconds(5), actionEvent -> {
             today.set(LocalDateTime.now());
             date.set(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(today.get()));
             time.set(formatter.format(today.get()));
             clock.setText(time + "\t" + date);
         }));
-        timeline.setCycleCount(Animation.INDEFINITE);
-        timeline.play();
+        clock_timeline.setCycleCount(Animation.INDEFINITE);
+        clock_timeline.play();
     }
 
     @FXML
@@ -153,5 +157,15 @@ public class Controller {
     public void emergency_hide() {
         popup.setVisible(false);
         popup.setMouseTransparent(true);
+    }
+
+    public void danger_show() {
+        danger.setVisible(true);
+        danger.setMouseTransparent(false);
+    }
+
+    public void danger_hide() {
+        danger.setVisible(false);
+        danger.setMouseTransparent(true);
     }
 }
