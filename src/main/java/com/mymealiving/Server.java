@@ -15,14 +15,12 @@ class Server extends Thread {
     // Constructor
     public Server(int port) {
         ServerSocket ss;
-        System.out.println("Running...");
         Socket tempS;
         BufferedReader tempRead;
         PrintWriter tempWrite;
         try {
             ss = new ServerSocket(port);
             tempS = ss.accept();
-            System.out.println("A new client is connected : " + tempS);
 
             tempRead = new BufferedReader(new InputStreamReader(tempS.getInputStream()));
             tempWrite = new PrintWriter(tempS.getOutputStream(), true);
@@ -44,22 +42,18 @@ class Server extends Thread {
         while (true) {
             try {
                 received = read.readLine();
-                System.out.println(received);
 
                 if (received.equals("mea")) {
-                    System.out.println("DANGER");
-                    //Controller.danger_show();
                     write.println("true");
                     Controller controller = MainApp.loader.getController();
                     controller.danger_show();
                 }
             } catch (NullPointerException | IOException e) {
                 e.printStackTrace();
-                System.out.println("this part");
                 break;
             }
         }
-        System.out.println("stuff");
+
         Thread.currentThread().interrupt();
     }
 }

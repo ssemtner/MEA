@@ -56,7 +56,7 @@
             <children>
                <HBox>
                   <children>
-                     <StackPane onMouseClicked="#news">
+                     <StackPane onMouseEntered="#news">
                         <children>
                                <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#8286ea" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
                                    <effect>
@@ -76,7 +76,7 @@
                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                         </padding>
                      </StackPane>
-                     <StackPane onMouseClicked="#kitchen">
+                     <StackPane onMouseEntered="#kitchen">
                         <children>
                                <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#bde07f" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
                                    <effect>
@@ -103,7 +103,7 @@
                </HBox>
                <HBox>
                   <children>
-                     <StackPane onMouseClicked="#doors">
+                     <StackPane onMouseEntered="#doors">
                         <children>
                                <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#de8670" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
                                    <effect>
@@ -123,14 +123,14 @@
                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                         </padding>
                      </StackPane>
-                     <StackPane onMouseClicked="#appliances">
+                     <StackPane onMouseEntered="#appliances">
                         <children>
                                <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffe856" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
                                    <effect>
                                        <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
                                    </effect>
                                </Rectangle>
-                               <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#appliances" text="Appliances">
+                               <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#appliances" text="Appliances">
                                    <font>
                                        <Font name="System Bold" size="40.0" />
                                    </font>
@@ -148,7 +148,7 @@
             </children>
          </VBox>
         </Pane>
-         <StackPane layoutX="452.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#emergency_show" prefHeight="120.0" prefWidth="120.0">
+         <StackPane layoutX="452.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#emergency_show" prefHeight="120.0" prefWidth="120.0">
              <Circle fill="#d55e00" radius="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
              <Circle fill="#898b8d" radius="55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
              <ImageView fitHeight="138.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
@@ -242,13 +242,13 @@
              </Label>
          </StackPane>
     </Pane>
-    <Rectangle fx:id="home_button" arcHeight="60.0" arcWidth="30.0" fill="#e2ae35" height="40.0" layoutX="462.0" layoutY="540.0" onMouseClicked="#home" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+    <Rectangle fx:id="home_button" arcHeight="60.0" arcWidth="30.0" fill="#e2ae35" height="40.0" layoutX="462.0" layoutY="540.0" onMouseEntered="#home" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
     <Label fx:id="clock" layoutX="20.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="600.0" minHeight="-Infinity" prefHeight="20.0" prefWidth="300.0">
         <font>
             <Font name="System" size="16.0" />
         </font>
     </Label>
-    <StackPane fx:id="emergency_button" layoutX="437.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#emergency_show" prefHeight="40.0" prefWidth="150.0" visible="false">
+    <StackPane fx:id="emergency_button" layoutX="437.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#emergency_show" prefHeight="40.0" prefWidth="150.0" visible="false">
         <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#b7472a" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7472a" height="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0">
             <StackPane.margin>
@@ -263,7 +263,7 @@
     </StackPane>
     <Pane fx:id="popup" mouseTransparent="true" prefHeight="600.0" prefWidth="1024.0" visible="false">
         <Rectangle fill="#ffffffd9" height="600.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1024.0" />
-        <StackPane layoutX="400.0" layoutY="404.0" onMouseClicked="#emergency_hide">
+        <StackPane layoutX="400.0" layoutY="404.0" onMouseEntered="#emergency_hide">
             <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#e6e6f1" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0">
                 <effect>
                     <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
@@ -286,7 +286,7 @@
     </Pane>
     <Pane fx:id="danger" mouseTransparent="true" prefHeight="600.0" prefWidth="1024.0" visible="false">
         <Rectangle fill="#ffffffd9" height="600.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1024.0" />
-        <StackPane layoutX="420.0" layoutY="404.0" onMouseClicked="#danger_hide">
+        <StackPane layoutX="420.0" layoutY="404.0" onMouseEntered="#danger_hide">
             <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#e6e6f1" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0">
                 <effect>
                     <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
