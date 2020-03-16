@@ -51,7 +51,7 @@ public class Door {
         label.setMinHeight(60);
 
         StackPane stackpane = new StackPane();
-        stackpane.setOnMouseClicked(event -> Controller.toggle(event, "CLOSED", "F1935C", "OPEN", "B7472A"));
+        stackpane.setOnMouseEntered(event -> Controller.toggle(event, "CLOSED", "F1935C", "OPEN", "B7472A"));
         stackpane.setPadding(new Insets(0, 0, 0, 80));
         stackpane.setMaxWidth(130);
         stackpane.setMinWidth(130);

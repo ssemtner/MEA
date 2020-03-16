@@ -57,7 +57,7 @@ public class Appliance {
         label.setMinHeight(60);
 
         StackPane stackpane = new StackPane();
-        stackpane.setOnMouseClicked(event -> System.out.println("Stuff"));
+        stackpane.setOnMouseEntered(event -> System.out.println("Stuff"));
         stackpane.setPadding(new Insets(0, 0, 0, 80));
         stackpane.setMaxWidth(130);
         stackpane.setMinWidth(130);

@@ -10,7 +10,7 @@
 <?import javafx.scene.text.*?>
 
 <Pane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="com.mymealiving.Controller">
-    <Pane layoutX="10.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="1004.0">
+    <Pane layoutX="10.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="1004.0">
         <Rectangle arcHeight="50.0" arcWidth="20.0" fill="#423f3f" height="20.0" layoutX="900.0" layoutY="5.0" stroke="TRANSPARENT" strokeType="INSIDE" width="60.0" />
     </Pane>
     <Pane fx:id="kitchen" visible="false">
@@ -243,12 +243,12 @@
          </StackPane>
     </Pane>
     <Rectangle fx:id="home_button" arcHeight="60.0" arcWidth="30.0" fill="#e2ae35" height="40.0" layoutX="462.0" layoutY="540.0" onMouseEntered="#home" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
-    <Label fx:id="clock" layoutX="20.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="600.0" minHeight="-Infinity" prefHeight="20.0" prefWidth="300.0">
+    <Label fx:id="clock" layoutX="20.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="600.0" minHeight="-Infinity" prefHeight="20.0" prefWidth="300.0">
         <font>
             <Font name="System" size="16.0" />
         </font>
     </Label>
-    <StackPane fx:id="emergency_button" layoutX="437.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#emergency_show" prefHeight="40.0" prefWidth="150.0" visible="false">
+    <StackPane fx:id="emergency_button" layoutX="437.0" layoutY="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#emergency_show" prefHeight="40.0" prefWidth="150.0" visible="false">
         <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#b7472a" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7472a" height="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0">
             <StackPane.margin>

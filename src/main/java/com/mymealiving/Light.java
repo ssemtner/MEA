@@ -40,7 +40,7 @@ public class Light {
 
         StackPane stackpane = new StackPane();
         stackpane.setPadding(new Insets(10, 0, 10, 20));
-        stackpane.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> Controller.toggle(event, "ON", "#F1935C", "OFF", "#B7472A"));
+        stackpane.setOnMouseEntered(event -> Controller.toggle(event, "ON", "#F1935C", "OFF", "#B7472A"));
 
         Rectangle rectangle = new Rectangle();
         rectangle.setWidth(100);
