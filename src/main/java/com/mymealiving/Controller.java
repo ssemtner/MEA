@@ -10,10 +10,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 
+import java.io.File;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -31,6 +34,7 @@ public class Controller {
     private StackPane emergency_button;
     @FXML
     private Rectangle home_button;
+
 
     static void toggle(MouseEvent event, String text1, String color1, String text2, String color2) {
         StackPane pane = (StackPane) event.getSource();
@@ -145,6 +149,10 @@ public class Controller {
         }));
         clock_timeline.setCycleCount(Animation.INDEFINITE);
         clock_timeline.play();
+
+        Media sound = new Media(getClass().getResource("test.mp3").toExternalForm());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
     }
 
     @FXML

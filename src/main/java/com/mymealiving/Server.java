@@ -14,23 +14,31 @@ class Server extends Thread {
 
     // Constructor
     public Server(int port) {
-        ServerSocket ss;
+        //Defines main variables
+	ServerSocket ss;
         Socket tempS;
         BufferedReader tempRead;
         PrintWriter tempWrite;
+
         try {
+	    //Starts server at port (port)
             ss = new ServerSocket(port);
+	    //Connects to a client
             tempS = ss.accept();
 
+	    //Sets up reader and writer channels
             tempRead = new BufferedReader(new InputStreamReader(tempS.getInputStream()));
             tempWrite = new PrintWriter(tempS.getOutputStream(), true);
+        }
 
-        } catch (Exception e) {
+	catch (Exception e) {
             e.printStackTrace();
             tempS = null;
             tempRead = null;
             tempWrite = null;
         }
+
+	//Sets instance variables to constructor variables
         this.s = tempS;
         this.read = tempRead;
         this.write = tempWrite;
@@ -39,6 +47,7 @@ class Server extends Thread {
     @Override
     public void run() {
         String received;
+
         while (true) {
             try {
                 received = read.readLine();
