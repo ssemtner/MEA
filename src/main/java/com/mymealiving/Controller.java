@@ -149,10 +149,6 @@ public class Controller {
         }));
         clock_timeline.setCycleCount(Animation.INDEFINITE);
         clock_timeline.play();
-
-        Media sound = new Media(getClass().getResource("test.mp3").toExternalForm());
-        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-        mediaPlayer.play();
     }
 
     @FXML
