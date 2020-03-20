@@ -26,25 +26,3 @@ jobs:
       with:
         name: mea
         path: build/image/
-  armv7:
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v1.0.0
-      - name: Build on ARM
-        uses: uraimo/run-on-arch-action@v1.0.7
-        with:
-          architecture: armv7
-          distribution: buster
-          run: |
-            sudo apt-get -y update
-            sudo apt-get -y install openjdk-11-jdk openjfx git
-            git clone https://ssemtner:jel1yB3an@github.com/ssemtner/mea.git
-            cd mea
-            chmod +x gradlew
-            ./gradlew jlink
-            cd build/image/bin
-
-
-
-
-
