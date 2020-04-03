@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 public class MainApp extends Application {
     public static FXMLLoader loader;
 
-
     public static String toDisplayCase(String s) {
         final String ACTIONABLE_DELIMITERS = " '-/";
 

@@ -15,30 +15,28 @@ class Server extends Thread {
     // Constructor
     public Server(int port) {
         //Defines main variables
-	ServerSocket ss;
+        ServerSocket ss;
         Socket tempS;
         BufferedReader tempRead;
         PrintWriter tempWrite;
 
         try {
-	    //Starts server at port (port)
+            //Starts server at port (port)
             ss = new ServerSocket(port);
-	    //Connects to a client
+            //Connects to a client
             tempS = ss.accept();
 
-	    //Sets up reader and writer channels
+            //Sets up reader and writer channels
             tempRead = new BufferedReader(new InputStreamReader(tempS.getInputStream()));
             tempWrite = new PrintWriter(tempS.getOutputStream(), true);
-        }
-
-	catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             tempS = null;
             tempRead = null;
             tempWrite = null;
         }
 
-	//Sets instance variables to constructor variables
+        //Sets instance variables to constructor variables
         this.s = tempS;
         this.read = tempRead;
         this.write = tempWrite;

@@ -16,7 +16,8 @@ Updating:
   2) cd ..
   3) git pull
   
- 
+ ##THIS IS NOT CORRECT:
+  
  # How To Run On Raspberry Pi
  First Time:
   1) Open command prompt

@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<Pane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="com.mymealiving.Controller">
+<Pane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mymealiving.Controller">
     <Pane layoutX="10.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="1004.0">
         <Rectangle arcHeight="50.0" arcWidth="20.0" fill="#423f3f" height="20.0" layoutX="900.0" layoutY="5.0" stroke="TRANSPARENT" strokeType="INSIDE" width="60.0" />
     </Pane>
@@ -42,137 +51,154 @@
             </StackPane>
         </AnchorPane>
     </Pane>
-    <Pane fx:id="news" visible="false">
-        <Rectangle fill="#8286ea" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
-        <Label layoutX="40.0" layoutY="40.0" prefHeight="60.0" text="News">
-            <font>
-                <Font name="System Bold" size="38.0" />
-            </font>
-        </Label>
-        </Pane>
     <Pane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" visible="false">
         <Pane layoutX="62.0" layoutY="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="900.0">
-         <VBox alignment="CENTER" layoutX="50.0" layoutY="25.0">
-            <children>
-               <HBox>
-                  <children>
-                     <StackPane onMouseEntered="#news">
+            <VBox alignment="CENTER" layoutX="50.0" layoutY="25.0">
+                <children>
+                    <HBox>
                         <children>
-                               <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#8286ea" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
-                                   <effect>
-                                       <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
-                                   </effect>
-                               </Rectangle>
-                               <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="News">
-                                   <font>
-                                       <Font name="System Bold" size="40.0" />
-                                   </font>
-                              <padding>
-                                 <Insets top="80.0" />
-                              </padding>
-                               </Label>
-                        </children>
-                        <padding>
-                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                        </padding>
-                     </StackPane>
-                     <StackPane onMouseEntered="#kitchen">
-                        <children>
-                               <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#bde07f" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
-                                   <effect>
-                                       <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
-                                   </effect>
-                               </Rectangle>
-                               <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Kitchen">
-                                   <font>
-                                       <Font name="System Bold" size="40.0" />
-                                   </font>
-                              <StackPane.margin>
-                                 <Insets />
-                              </StackPane.margin>
-                              <padding>
-                                 <Insets top="80.0" />
-                              </padding>
-                               </Label>
-                        </children>
-                        <padding>
-                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                        </padding>
-                     </StackPane>
-                  </children>
-               </HBox>
-               <HBox>
-                  <children>
-                     <StackPane onMouseEntered="#doors">
-                        <children>
-                               <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#de8670" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
-                                   <effect>
-                                       <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
-                                   </effect>
-                               </Rectangle>
-                               <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Doors">
-                                   <font>
-                                       <Font name="System Bold" size="40.0" />
-                                   </font>
-                              <padding>
-                                 <Insets top="80.0" />
-                              </padding>
-                               </Label>
-                        </children>
-                        <padding>
-                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                        </padding>
-                     </StackPane>
                      <StackPane onMouseEntered="#appliances">
                         <children>
-                               <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffe856" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
-                                   <effect>
-                                       <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
-                                   </effect>
-                               </Rectangle>
-                               <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#appliances" text="Appliances">
-                                   <font>
-                                       <Font name="System Bold" size="40.0" />
-                                   </font>
+                           <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffe856" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
+                              <effect>
+                                 <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
+                              </effect>
+                           </Rectangle>
+                           <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#appliances" text="Appliances">
+                              <font>
+                                 <Font name="System Bold" size="40.0" />
+                              </font>
                               <padding>
                                  <Insets top="80.0" />
                               </padding>
-                               </Label>
+                           </Label>
                         </children>
                         <padding>
                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                         </padding>
                      </StackPane>
-                  </children>
-               </HBox>
-            </children>
-         </VBox>
+                            <StackPane onMouseEntered="#kitchen">
+                                <children>
+                                    <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#bde07f" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
+                                        <effect>
+                                            <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
+                                        </effect>
+                                    </Rectangle>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Kitchen">
+                                        <font>
+                                            <Font name="System Bold" size="40.0" />
+                                        </font>
+                                        <StackPane.margin>
+                                            <Insets />
+                                        </StackPane.margin>
+                                        <padding>
+                                            <Insets top="80.0" />
+                                        </padding>
+                                    </Label>
+                                </children>
+                                <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                </padding>
+                            </StackPane>
+                        </children>
+                    </HBox>
+                    <HBox>
+                        <children>
+                            <StackPane onMouseEntered="#doors">
+                                <children>
+                                    <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#de8670" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
+                                        <effect>
+                                            <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
+                                        </effect>
+                                    </Rectangle>
+                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Doors">
+                                        <font>
+                                            <Font name="System Bold" size="40.0" />
+                                        </font>
+                                        <padding>
+                                            <Insets top="80.0" />
+                                        </padding>
+                                    </Label>
+                                </children>
+                                <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                </padding>
+                            </StackPane>
+                     <StackPane onMouseEntered="#options">
+                        <children>
+                           <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#8286ea" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
+                              <effect>
+                                 <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
+                              </effect>
+                           </Rectangle>
+                           <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Options">
+                              <font>
+                                 <Font name="System Bold" size="40.0" />
+                              </font>
+                              <padding>
+                                 <Insets top="80.0" />
+                              </padding>
+                           </Label>
+                        </children>
+                        <padding>
+                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        </padding>
+                     </StackPane>
+                        </children>
+                    </HBox>
+                </children>
+            </VBox>
         </Pane>
-         <StackPane layoutX="452.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#emergency_show" prefHeight="120.0" prefWidth="120.0">
-             <Circle fill="#d55e00" radius="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-             <Circle fill="#898b8d" radius="55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-             <ImageView fitHeight="138.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
-                 <StackPane.margin>
-                     <Insets top="10.0" />
-                 </StackPane.margin>
-                 <Image url="@emergency_symbol.png" />
-             </ImageView>
-         </StackPane>
+        <StackPane layoutX="452.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#emergency_show" prefHeight="120.0" prefWidth="120.0">
+            <Circle fill="#d55e00" radius="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#898b8d" radius="55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <ImageView fitHeight="138.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+                <StackPane.margin>
+                    <Insets top="10.0" />
+                </StackPane.margin>
+                <Image url="@emergency_symbol.png" />
+            </ImageView>
+        </StackPane>
     </Pane>
-    <Pane fx:id="doors_pane" prefHeight="600.0" prefWidth="1024.0" visible="false">
-        <Rectangle fill="#de8670" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
-        <Label layoutX="40.0" layoutY="40.0" prefHeight="60.0" text="Doors">
+    <Pane fx:id="options" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0">
+        <Rectangle fill="#8286ea" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
+        <Label layoutX="40.0" layoutY="40.0" prefHeight="60.0" text="Options">
             <font>
                 <Font name="System Bold" size="38.0" />
             </font>
         </Label>
-        <ScrollPane hbarPolicy="NEVER" hmax="0.0" layoutX="6.0" layoutY="106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="750.0" vbarPolicy="NEVER">
-            <TilePane fx:id="doors" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="520.0" vgap="10.0">
-                <padding>
-                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                </padding>
-            </TilePane>
-        </ScrollPane>
+      <VBox layoutX="242.0" layoutY="200.0" prefHeight="200.0" prefWidth="532.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="440.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="319.0">
+                     <children>
+                        <Label prefHeight="53.0" prefWidth="289.0" text="Font Size">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="35.0" prefWidth="303.0" text="Adjust the size of the text">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <MenuButton alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="45.0" text="Font Size" textAlignment="CENTER">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Small" />
+                      <MenuItem mnemonicParsing="false" text="Medium" />
+                        <MenuItem mnemonicParsing="false" text="Large" />
+                    </items>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </MenuButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
     </Pane>
     <Pane fx:id="appliances" prefHeight="600.0" prefWidth="1024.0" visible="false">
         <StackPane layoutX="40.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0">
@@ -233,14 +259,29 @@
             </VBox>
         </StackPane>
         <AnchorPane layoutX="515.0" layoutY="410.0" />
-         <StackPane layoutX="610.0" layoutY="505.0">
-             <Rectangle arcHeight="40.0" arcWidth="30.0" fill="#e6e6f1" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="120.0" />
-             <Label text="ADD BLIND">
-                 <font>
-                     <Font name="System Bold" size="18.0" />
-                 </font>
-             </Label>
-         </StackPane>
+        <StackPane layoutX="610.0" layoutY="505.0">
+            <Rectangle arcHeight="40.0" arcWidth="30.0" fill="#e6e6f1" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="120.0" />
+            <Label text="ADD BLIND">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+        </StackPane>
+    </Pane>
+    <Pane fx:id="doors_pane" prefHeight="600.0" prefWidth="1024.0" visible="false">
+        <Rectangle fill="#de8670" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
+        <Label layoutX="40.0" layoutY="40.0" prefHeight="60.0" text="Doors">
+            <font>
+                <Font name="System Bold" size="38.0" />
+            </font>
+        </Label>
+        <ScrollPane hbarPolicy="NEVER" hmax="0.0" layoutX="6.0" layoutY="106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="750.0" vbarPolicy="NEVER">
+            <TilePane fx:id="doors" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="520.0" vgap="10.0">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+            </TilePane>
+        </ScrollPane>
     </Pane>
     <Rectangle fx:id="home_button" arcHeight="60.0" arcWidth="30.0" fill="#e2ae35" height="40.0" layoutX="462.0" layoutY="540.0" onMouseEntered="#home" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
     <Label fx:id="clock" layoutX="20.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="600.0" minHeight="-Infinity" prefHeight="20.0" prefWidth="300.0">
@@ -263,7 +304,7 @@
     </StackPane>
     <Pane fx:id="popup" mouseTransparent="true" prefHeight="600.0" prefWidth="1024.0" visible="false">
         <Rectangle fill="#ffffffd9" height="600.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1024.0" />
-        <StackPane layoutX="400.0" layoutY="404.0" onMouseEntered="#emergency_hide">
+        <StackPane layoutX="412.0" layoutY="530.0" onMouseEntered="#emergency_hide">
             <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#e6e6f1" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0">
                 <effect>
                     <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
@@ -275,11 +316,11 @@
                 </font>
             </Label>
         </StackPane>
-        <StackPane layoutX="420.0" layoutY="58.0">
-            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#b7472a" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="160.0" />
+        <StackPane layoutX="412.0" layoutY="135.0" prefWidth="200.0">
+            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#b7472a" height="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
             <Label text="CALL 911">
                 <font>
-                    <Font name="System Bold" size="24.0" />
+                    <Font name="System Bold" size="36.0" />
                 </font>
             </Label>
         </StackPane>

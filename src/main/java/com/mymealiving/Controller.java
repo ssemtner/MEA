@@ -3,6 +3,7 @@ package com.mymealiving;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
@@ -11,20 +12,19 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Paint;
+import javafx.scene.robot.Robot;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
-import javafx.scene.robot.Robot;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.concurrent.TimeUnit;
 
 public class Controller {
     private static Robot robot = new Robot();
     @FXML
-    private Pane home, kitchen, appliances, doors_pane, news, popup, danger;
+    private Pane home, kitchen, appliances, doors_pane, options, popup, danger;
     @FXML
     private TilePane lights, blinds, kitchen_appliances, doors;
     @FXML
@@ -33,8 +33,6 @@ public class Controller {
     private StackPane emergency_button;
     @FXML
     private Rectangle home_button;
-    private static boolean cancelClicked = false;
-
 
     static void toggle(MouseEvent event, String text1, String color1, String text2, String color2) {
         StackPane pane = (StackPane) event.getSource();
@@ -48,71 +46,64 @@ public class Controller {
             text.setText(text1);
             rect.setFill(Paint.valueOf(color1));
         }
-	robot.mouseMove(0, 0);
+        robot.mouseMove(0, 0);
     }
 
     static void switchPane(Node on, Node off1, Node off2, Node off3, Node off4, Node home_button, Node emergency_button) {
-        if (cancelClicked && on.getId().equals("home")) {
-	    robot.mouseMove(0, 0);
-	    cancelClicked = false;
-        }
-        else {
-    	    on.setVisible(true);
-            on.setMouseTransparent(false);
-            off1.setVisible(false);
-            off1.setMouseTransparent(true);
-            off2.setVisible(false);
-            off2.setMouseTransparent(true);
-            off3.setVisible(false);
-            off3.setMouseTransparent(true);
-            off4.setVisible(false);
-            off4.setMouseTransparent(true);
+        on.setVisible(true);
+        on.setMouseTransparent(false);
+        off1.setVisible(false);
+        off1.setMouseTransparent(true);
+        off2.setVisible(false);
+        off2.setMouseTransparent(true);
+        off3.setVisible(false);
+        off3.setMouseTransparent(true);
+        off4.setVisible(false);
+        off4.setMouseTransparent(true);
 
-            if (on.getId().equals("home")) {
-                emergency_button.setVisible(false);
-                emergency_button.setMouseTransparent(true);
-                home_button.setVisible(false);
-                home_button.setMouseTransparent(true);
-            }
-            else {
-                emergency_button.setVisible(true);
-                emergency_button.setMouseTransparent(false);
-                home_button.setVisible(true);
-                home_button.setMouseTransparent(false);
-            }
-	    robot.mouseMove(0, 0);
+        if (on.getId().equals("home")) {
+            emergency_button.setVisible(false);
+            emergency_button.setMouseTransparent(true);
+            home_button.setVisible(false);
+            home_button.setMouseTransparent(true);
+        } else {
+            emergency_button.setVisible(true);
+            emergency_button.setMouseTransparent(false);
+            home_button.setVisible(true);
+            home_button.setMouseTransparent(false);
         }
+        robot.mouseMove(0, 0);
     }
 
     @FXML
     void appliances() {
-        switchPane(appliances, home, doors_pane, kitchen, news, home_button, emergency_button);
+        switchPane(appliances, home, doors_pane, kitchen, options, home_button, emergency_button);
     }
 
     @FXML
     void doors() {
-        switchPane(doors_pane, appliances, home, kitchen, news, home_button, emergency_button);
+        switchPane(doors_pane, appliances, home, kitchen, options, home_button, emergency_button);
     }
 
     @FXML
     void kitchen() {
-        switchPane(kitchen, appliances, doors_pane, home, news, home_button, emergency_button);
+        switchPane(kitchen, appliances, doors_pane, home, options, home_button, emergency_button);
     }
 
     @FXML
-    void news() {
-        switchPane(news, appliances, doors_pane, kitchen, home, home_button, emergency_button);
+    void options() {
+        switchPane(options, appliances, doors_pane, kitchen, home, home_button, emergency_button);
     }
 
     @FXML
     void home() {
-        switchPane(home, appliances, doors_pane, kitchen, news, home_button, emergency_button);
+        switchPane(home, appliances, doors_pane, kitchen, options, home_button, emergency_button);
     }
 
     @FXML
     void initialize() {
         //Show home screen
-	robot.mouseMove(0, 0);
+        robot.mouseMove(0, 0);
         home();
         emergency_hide();
         danger_hide();
@@ -161,40 +152,36 @@ public class Controller {
     }
 
     @FXML
-    public void emergency_show() {
+    public void emergency_show(MouseEvent event) {
+        System.out.println(home.getChildren().get(1));
+        StackPane cancel = (StackPane) popup.getChildren().get(1);
+        if (((StackPane) event.getSource()).getParent().getId().equals("home")) {
+            cancel.setLayoutY(520);
+        } else {
+            cancel.setLayoutY(450);
+        }
+
         popup.setVisible(true);
         popup.setMouseTransparent(false);
-	robot.mouseMove(0, 0);
+        robot.mouseMove(0, 0);
     }
 
     @FXML
     public void emergency_hide() {
-    	popup.setVisible(false);
-	robot.mouseMove(0, 0);
-	cancelClicked = true;
-	try {
-	    TimeUnit.SECONDS.sleep(1);
-	} catch (InterruptedException e) {
-	    e.printStackTrace();
-	}
-	popup.setMouseTransparent(true);
+        popup.setVisible(false);
+        robot.mouseMove(0, 0);
+        popup.setMouseTransparent(true);
     }
 
     public void danger_show() {
         danger.setVisible(true);
         danger.setMouseTransparent(false);
-	robot.mouseMove(0, 0);
+        robot.mouseMove(0, 0);
     }
 
     public void danger_hide() {
         danger.setVisible(false);
-	robot.mouseMove(0, 0);
-	try {
-	    TimeUnit.SECONDS.sleep(1);
-	} catch (InterruptedException e) {
-	    e.printStackTrace();
-	}
+        robot.mouseMove(0, 0);
         danger.setMouseTransparent(true);
-   }
+    }
 }
-
