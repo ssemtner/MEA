@@ -3,11 +3,12 @@ package com.mymealiving;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
@@ -28,11 +29,13 @@ public class Controller {
     @FXML
     private TilePane lights, blinds, kitchen_appliances, doors;
     @FXML
-    private Label clock;
+    private Label clock, font_label_a, font_label_b, font_label_c;
     @FXML
     private StackPane emergency_button;
     @FXML
     private Rectangle home_button;
+    @FXML
+    private AnchorPane font_menu;
 
     static void toggle(MouseEvent event, String text1, String color1, String text2, String color2) {
         StackPane pane = (StackPane) event.getSource();
@@ -134,6 +137,9 @@ public class Controller {
         doors.setMinHeight(doors.getChildren().size() * 70);
         doors.setMaxHeight(doors.getChildren().size() * 70);
 
+        font_menu.setVisible(false);
+        font_menu.setMouseTransparent(true);
+
         //Start clock
         AtomicReference<LocalDateTime> today = new AtomicReference<>(LocalDateTime.now());
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm a");
@@ -153,7 +159,6 @@ public class Controller {
 
     @FXML
     public void emergency_show(MouseEvent event) {
-        System.out.println(home.getChildren().get(1));
         StackPane cancel = (StackPane) popup.getChildren().get(1);
         if (((StackPane) event.getSource()).getParent().getId().equals("home")) {
             cancel.setLayoutY(520);
@@ -184,4 +189,48 @@ public class Controller {
         robot.mouseMove(0, 0);
         danger.setMouseTransparent(true);
     }
+
+    public void toggle_font_menu(MouseEvent event) {
+        if (font_menu.isVisible()) {
+            System.out.println();
+            font_menu.setVisible(false);
+            font_menu.setMouseTransparent(true);
+        } else {
+            font_menu.setVisible(true);
+            font_menu.setMouseTransparent(false);
+        }
+
+        robot.mouseMove(0, 0);
+    }
+
+    public void font_select(MouseEvent event) {
+        Label source;
+        if (event.getSource().toString().contains("label_b")) {
+            source = font_label_b;
+        } else {
+            source = font_label_c;
+        }
+        font_label_a.setText(source.getText());
+        System.out.println(source.getText());
+        switch (source.getText()) {
+            case "Small":
+                font_label_b.setText("Medium");
+                font_label_c.setText("Large");
+                break;
+            case "Large":
+                font_label_b.setText("Small");
+                font_label_c.setText("Medium");
+                break;
+            default:
+                font_label_b.setText("Small");
+                font_label_c.setText("Large");
+        }
+        robot.mouseMove(0, 0);
+
+        String fontSize = font_label_a.getText().toLowerCase();
+
+        MainApp.scene.getStylesheets().remove(1);
+        MainApp.scene.getStylesheets().add(getClass().getResource(fontSize + "font.css").toExternalForm());
+    }
+
 }

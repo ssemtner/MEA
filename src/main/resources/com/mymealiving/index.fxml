@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
@@ -18,16 +17,20 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mymealiving.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mymealiving.Controller">
     <Pane layoutX="10.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="1004.0">
         <Rectangle arcHeight="50.0" arcWidth="20.0" fill="#423f3f" height="20.0" layoutX="900.0" layoutY="5.0" stroke="TRANSPARENT" strokeType="INSIDE" width="60.0" />
     </Pane>
-    <Pane fx:id="kitchen" visible="false">
+    <Pane fx:id="kitchen">
         <Rectangle fill="#bde07f" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
         <Label layoutX="40.0" layoutY="40.0" prefHeight="60.0" text="Kitchen">
             <font>
                 <Font name="System Bold" size="38.0" />
             </font>
+         <styleClass>
+            <String fx:value="f3" />
+            <String fx:value="b" />
+         </styleClass>
         </Label>
         <ScrollPane hbarPolicy="NEVER" hmax="0.0" layoutX="6.0" layoutY="106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="700.0" vbarPolicy="NEVER">
             <TilePane fx:id="kitchen_appliances" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" vgap="10.0">
@@ -47,6 +50,10 @@
                     <font>
                         <Font name="System Bold" size="24.0" />
                     </font>
+               <styleClass>
+                  <String fx:value="f5" />
+                  <String fx:value="b" />
+               </styleClass>
                 </Label>
             </StackPane>
         </AnchorPane>
@@ -54,99 +61,101 @@
     <Pane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" visible="false">
         <Pane layoutX="62.0" layoutY="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="900.0">
             <VBox alignment="CENTER" layoutX="50.0" layoutY="25.0">
-                <children>
-                    <HBox>
-                        <children>
-                     <StackPane onMouseEntered="#appliances">
-                        <children>
-                           <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffe856" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
-                              <effect>
-                                 <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
-                              </effect>
-                           </Rectangle>
-                           <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#appliances" text="Appliances">
-                              <font>
-                                 <Font name="System Bold" size="40.0" />
-                              </font>
-                              <padding>
-                                 <Insets top="80.0" />
-                              </padding>
-                           </Label>
-                        </children>
+                <HBox>
+                    <StackPane onMouseEntered="#appliances">
                         <padding>
-                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                         </padding>
-                     </StackPane>
-                            <StackPane onMouseEntered="#kitchen">
-                                <children>
-                                    <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#bde07f" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
-                                        <effect>
-                                            <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
-                                        </effect>
-                                    </Rectangle>
-                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Kitchen">
-                                        <font>
-                                            <Font name="System Bold" size="40.0" />
-                                        </font>
-                                        <StackPane.margin>
-                                            <Insets />
-                                        </StackPane.margin>
-                                        <padding>
-                                            <Insets top="80.0" />
-                                        </padding>
-                                    </Label>
-                                </children>
-                                <padding>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                </padding>
-                            </StackPane>
-                        </children>
-                    </HBox>
-                    <HBox>
-                        <children>
-                            <StackPane onMouseEntered="#doors">
-                                <children>
-                                    <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#de8670" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
-                                        <effect>
-                                            <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
-                                        </effect>
-                                    </Rectangle>
-                                    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Doors">
-                                        <font>
-                                            <Font name="System Bold" size="40.0" />
-                                        </font>
-                                        <padding>
-                                            <Insets top="80.0" />
-                                        </padding>
-                                    </Label>
-                                </children>
-                                <padding>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                </padding>
-                            </StackPane>
-                     <StackPane onMouseEntered="#options">
-                        <children>
-                           <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#8286ea" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
-                              <effect>
-                                 <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
-                              </effect>
-                           </Rectangle>
-                           <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Options">
-                              <font>
-                                 <Font name="System Bold" size="40.0" />
-                              </font>
-                              <padding>
-                                 <Insets top="80.0" />
-                              </padding>
-                           </Label>
-                        </children>
+                        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffe856" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
+                            <effect>
+                                <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
+                            </effect>
+                        </Rectangle>
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#appliances" text="Appliances">
+                            <font>
+                                <Font name="System Bold" size="40.0" />
+                            </font>
+                            <padding>
+                                <Insets top="80.0" />
+                            </padding>
+                     <styleClass>
+                        <String fx:value="f2" />
+                        <String fx:value="b" />
+                     </styleClass>
+                        </Label>
+                    </StackPane>
+                    <StackPane onMouseEntered="#kitchen">
                         <padding>
-                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                         </padding>
-                     </StackPane>
-                        </children>
-                    </HBox>
-                </children>
+                        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#bde07f" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
+                            <effect>
+                                <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
+                            </effect>
+                        </Rectangle>
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Kitchen">
+                            <font>
+                                <Font name="System Bold" size="40.0" />
+                            </font>
+                            <StackPane.margin>
+                                <Insets />
+                            </StackPane.margin>
+                            <padding>
+                                <Insets top="80.0" />
+                            </padding>
+                     <styleClass>
+                        <String fx:value="f2" />
+                        <String fx:value="b" />
+                     </styleClass>
+                        </Label>
+                    </StackPane>
+                </HBox>
+                <HBox>
+                    <StackPane onMouseEntered="#doors">
+                        <padding>
+                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        </padding>
+                        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#de8670" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
+                            <effect>
+                                <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
+                            </effect>
+                        </Rectangle>
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Doors">
+                            <font>
+                                <Font name="System Bold" size="40.0" />
+                            </font>
+                            <padding>
+                                <Insets top="80.0" />
+                            </padding>
+                     <styleClass>
+                        <String fx:value="f2" />
+                        <String fx:value="b" />
+                     </styleClass>
+                        </Label>
+                    </StackPane>
+                    <StackPane onMouseEntered="#options">
+                        <padding>
+                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        </padding>
+                        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#8286ea" height="200.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0">
+                            <effect>
+                                <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
+                            </effect>
+                        </Rectangle>
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Options">
+                            <font>
+                                <Font name="System Bold" size="40.0" />
+                            </font>
+                            <padding>
+                                <Insets top="80.0" />
+                            </padding>
+                     <styleClass>
+                        <String fx:value="f2" />
+                        <String fx:value="b" />
+                     </styleClass>
+                        </Label>
+                    </StackPane>
+                </HBox>
             </VBox>
         </Pane>
         <StackPane layoutX="452.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#emergency_show" prefHeight="120.0" prefWidth="120.0">
@@ -166,39 +175,88 @@
             <font>
                 <Font name="System Bold" size="38.0" />
             </font>
+         <styleClass>
+            <String fx:value="f3" />
+            <String fx:value="b" />
+         </styleClass>
         </Label>
-      <VBox layoutX="242.0" layoutY="200.0" prefHeight="200.0" prefWidth="532.0">
-         <children>
-            <HBox prefHeight="100.0" prefWidth="440.0">
+        <VBox layoutX="50.0" layoutY="150.0" prefHeight="400.0" prefWidth="750.0">
+            <HBox prefHeight="125.0" prefWidth="440.0">
+                <VBox prefHeight="100.0" prefWidth="325.0">
+                    <Label prefHeight="75.0" prefWidth="325.0" text="Font Size">
+                        <font>
+                            <Font name="System Bold" size="36.0" />
+                        </font>
+                  <styleClass>
+                     <String fx:value="f4" />
+                     <String fx:value="b" />
+                  </styleClass>
+                    </Label>
+                    <Label prefHeight="60.0" prefWidth="325.0" text="Adjust the size of the text">
+                        <font>
+                            <Font size="24.0" />
+                        </font>
+                  <styleClass>
+                     <String fx:value="f5" />
+                     <String fx:value="r" />
+                  </styleClass>
+                    </Label>
+                </VBox>
+            <StackPane onMouseEntered="#toggle_font_menu" prefHeight="150.0" prefWidth="200.0">
                <children>
-                  <VBox prefHeight="100.0" prefWidth="319.0">
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e6e6f1" height="50.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+                  <Label fx:id="font_label_a" text="Medium">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="f4" />
+                        <String fx:value="b" />
+                     </styleClass>
+                  </Label>
+               </children>
+            </StackPane>
+            </HBox>
+        </VBox>
+      <AnchorPane fx:id="font_menu" layoutX="400.0" layoutY="230.0" prefHeight="150.0" prefWidth="150.0">
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="150.0">
+               <children>
+                  <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#e6e6f1" height="150.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" spacing="5.0">
                      <children>
-                        <Label prefHeight="53.0" prefWidth="289.0" text="Font Size">
+                        <Label fx:id="font_label_b" alignment="CENTER" onMouseEntered="#font_select" prefHeight="35.0" prefWidth="150.0" text="Small">
                            <font>
-                              <Font name="System Bold" size="36.0" />
+                              <Font name="System Bold" size="24.0" />
                            </font>
+                           <styleClass>
+                              <String fx:value="f5" />
+                              <String fx:value="b" />
+                           </styleClass>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
                         </Label>
-                        <Label prefHeight="35.0" prefWidth="303.0" text="Adjust the size of the text">
+                        <Label fx:id="font_label_c" alignment="CENTER" onMouseEntered="#font_select" prefHeight="35.0" prefWidth="150.0" text="Large">
                            <font>
-                              <Font size="24.0" />
+                              <Font name="System Bold" size="24.0" />
                            </font>
+                           <styleClass>
+                              <String fx:value="f5" />
+                              <String fx:value="b" />
+                           </styleClass>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
                         </Label>
                      </children>
-                  </VBox>
-                  <MenuButton alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="45.0" text="Font Size" textAlignment="CENTER">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Small" />
-                      <MenuItem mnemonicParsing="false" text="Medium" />
-                        <MenuItem mnemonicParsing="false" text="Large" />
-                    </items>
-                     <font>
-                        <Font name="System Bold" size="20.0" />
-                     </font>
-                  </MenuButton>
+                     <padding>
+                        <Insets top="15.0" />
+                     </padding></VBox>
                </children>
-            </HBox>
+            </StackPane>
          </children>
-      </VBox>
+      </AnchorPane>
     </Pane>
     <Pane fx:id="appliances" prefHeight="600.0" prefWidth="1024.0" visible="false">
         <StackPane layoutX="40.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0">
@@ -215,6 +273,10 @@
                     <padding>
                         <Insets left="20.0" top="10.0" />
                     </padding>
+               <styleClass>
+                  <String fx:value="f4" />
+                  <String fx:value="b" />
+               </styleClass>
                 </Label>
                 <ScrollPane hbarPolicy="NEVER" hmax="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="400.0" vbarPolicy="NEVER">
                     <TilePane fx:id="lights" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="290.0" minWidth="-Infinity" prefHeight="1000.0" prefWidth="400.0">
@@ -227,6 +289,10 @@
             <font>
                 <Font name="System Bold" size="38.0" />
             </font>
+         <styleClass>
+            <String fx:value="f3" />
+            <String fx:value="b" />
+         </styleClass>
         </Label>
         <AnchorPane layoutX="65.0" layoutY="505.0">
             <StackPane>
@@ -235,6 +301,10 @@
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
+               <styleClass>
+                  <String fx:value="f7" />
+                  <String fx:value="b" />
+               </styleClass>
                 </Label>
             </StackPane>
         </AnchorPane>
@@ -252,6 +322,10 @@
                     <padding>
                         <Insets left="20.0" top="10.0" />
                     </padding>
+               <styleClass>
+                  <String fx:value="f4" />
+                  <String fx:value="b" />
+               </styleClass>
                 </Label>
                 <ScrollPane hbarPolicy="NEVER" hmax="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="400.0" vbarPolicy="NEVER">
                     <TilePane fx:id="blinds" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="290.0" minWidth="-Infinity" prefHeight="1000.0" prefWidth="400.0" />
@@ -265,6 +339,10 @@
                 <font>
                     <Font name="System Bold" size="18.0" />
                 </font>
+            <styleClass>
+               <String fx:value="f7" />
+               <String fx:value="b" />
+            </styleClass>
             </Label>
         </StackPane>
     </Pane>
@@ -274,6 +352,10 @@
             <font>
                 <Font name="System Bold" size="38.0" />
             </font>
+         <styleClass>
+            <String fx:value="f3" />
+            <String fx:value="b" />
+         </styleClass>
         </Label>
         <ScrollPane hbarPolicy="NEVER" hmax="0.0" layoutX="6.0" layoutY="106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="750.0" vbarPolicy="NEVER">
             <TilePane fx:id="doors" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="520.0" vgap="10.0">
@@ -284,12 +366,12 @@
         </ScrollPane>
     </Pane>
     <Rectangle fx:id="home_button" arcHeight="60.0" arcWidth="30.0" fill="#e2ae35" height="40.0" layoutX="462.0" layoutY="540.0" onMouseEntered="#home" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
-    <Label fx:id="clock" layoutX="20.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="600.0" minHeight="-Infinity" prefHeight="20.0" prefWidth="300.0">
+    <Label fx:id="clock" layoutX="20.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="600.0" minHeight="-Infinity" prefHeight="20.0" prefWidth="300.0" styleClass="f8">
         <font>
             <Font name="System" size="16.0" />
         </font>
     </Label>
-    <StackPane fx:id="emergency_button" layoutX="437.0" layoutY="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#emergency_show" prefHeight="40.0" prefWidth="150.0" visible="false">
+    <StackPane fx:id="emergency_button" layoutX="437.0" layoutY="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#emergency_show" prefHeight="40.0" prefWidth="150.0">
         <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#b7472a" height="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7472a" height="31.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0">
             <StackPane.margin>
@@ -300,6 +382,10 @@
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
+         <styleClass>
+            <String fx:value="f6" />
+            <String fx:value="b" />
+         </styleClass>
         </Label>
     </StackPane>
     <Pane fx:id="popup" mouseTransparent="true" prefHeight="600.0" prefWidth="1024.0" visible="false">
@@ -314,6 +400,10 @@
                 <font>
                     <Font name="System Bold" size="24.0" />
                 </font>
+            <styleClass>
+               <String fx:value="f5" />
+               <String fx:value="b" />
+            </styleClass>
             </Label>
         </StackPane>
         <StackPane layoutX="412.0" layoutY="135.0" prefWidth="200.0">
@@ -322,6 +412,10 @@
                 <font>
                     <Font name="System Bold" size="36.0" />
                 </font>
+            <styleClass>
+               <String fx:value="f4" />
+               <String fx:value="b" />
+            </styleClass>
             </Label>
         </StackPane>
     </Pane>
@@ -337,6 +431,10 @@
                 <font>
                     <Font name="System Bold" size="24.0" />
                 </font>
+            <styleClass>
+               <String fx:value="f5" />
+               <String fx:value="b" />
+            </styleClass>
             </Label>
         </StackPane>
         <StackPane layoutX="270.0" layoutY="160.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="500.0">
@@ -345,6 +443,10 @@
                 <font>
                     <Font name="System Bold" size="64.0" />
                 </font>
+            <styleClass>
+               <String fx:value="f1" />
+               <String fx:value="b" />
+            </styleClass>
             </Label>
         </StackPane>
     </Pane>

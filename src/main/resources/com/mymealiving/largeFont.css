@@ -1,0 +1,35 @@
+.f1 {
+    -fx-font-size: 68px;
+}
+
+.f2 {
+    -fx-font-size: 44px;
+}
+
+.f3 {
+    -fx-font-size: 42px;
+}
+
+.f4 {
+    -fx-font-size: 40px;
+}
+
+.f5 {
+    -fx-font-size: 28px;
+}
+
+.f6 {
+    -fx-font-size: 24px;
+}
+
+.f7 {
+    -fx-font-size: 22px;
+}
+
+.f8 {
+    -fx-font-size: 20px;
+}
+
+.b {
+    -fx-font-weight: bold;
+}
