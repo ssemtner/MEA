@@ -205,11 +205,13 @@ public class Controller {
 
     public void font_select(MouseEvent event) {
         Label source;
+        String lastSize;
         if (event.getSource().toString().contains("label_b")) {
             source = font_label_b;
         } else {
             source = font_label_c;
         }
+        lastSize = font_label_a.getText().toLowerCase();
         font_label_a.setText(source.getText());
         System.out.println(source.getText());
         switch (source.getText()) {
@@ -229,8 +231,11 @@ public class Controller {
 
         String fontSize = font_label_a.getText().toLowerCase();
 
-        MainApp.scene.getStylesheets().remove(1);
-        MainApp.scene.getStylesheets().add(getClass().getResource(fontSize + "font.css").toExternalForm());
+        System.out.println(getClass().getResource(lastSize + "Font.css").toExternalForm());
+        System.out.println(getClass().getResource(fontSize + "Font.css").toExternalForm());
+
+        MainApp.scene.getStylesheets().remove(getClass().getResource(lastSize + "Font.css").toExternalForm());
+        MainApp.scene.getStylesheets().add(getClass().getResource(fontSize + "Font.css").toExternalForm());
     }
 
 }
