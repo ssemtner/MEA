@@ -8,8 +8,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 
 public class Light {
     String name;
@@ -35,7 +33,8 @@ public class Light {
         text.setMaxHeight(60);
         text.setMinHeight(60);
         text.setPadding(new Insets(0, 0, 0, 30));
-        text.setFont(Font.font("System", FontWeight.BOLD, 18));
+        text.getStyleClass().add("f7");
+        text.getStyleClass().add("b");
 
         StackPane stackpane = new StackPane();
         stackpane.setPadding(new Insets(10, 0, 10, 20));
@@ -52,7 +51,8 @@ public class Light {
 
         Label button_label = new Label();
         button_label.setText("ON");
-        button_label.setFont(Font.font("System", FontWeight.BOLD, 18));
+        button_label.getStyleClass().add("f7");
+        button_label.getStyleClass().add("b");
 
         Line line = new Line();
         line.setStartX(-125);

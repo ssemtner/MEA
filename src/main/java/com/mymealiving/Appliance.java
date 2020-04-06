@@ -9,8 +9,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 
 public class Appliance {
     String name;
@@ -43,7 +41,8 @@ public class Appliance {
         Label label = new Label();
         label.setText(MainApp.toDisplayCase(name));
         label.setPadding(new Insets(0, 0, 0, 10));
-        label.setFont(Font.font("System", FontWeight.BOLD, 24));
+        label.getStyleClass().add("f5");
+        label.getStyleClass().add("b");
         label.setAlignment(Pos.CENTER_LEFT);
         label.setMaxWidth(300);
         label.setMinWidth(300);
@@ -69,7 +68,8 @@ public class Appliance {
 
         Label btn_txt = new Label();
         btn_txt.setText("DANGER");
-        btn_txt.setFont(Font.font("System", FontWeight.BOLD, 24));
+        btn_txt.getStyleClass().add("f5");
+        btn_txt.getStyleClass().add("b");
         btn_txt.setAlignment(Pos.CENTER);
         btn_txt.setMaxWidth(120);
         btn_txt.setMinWidth(120);

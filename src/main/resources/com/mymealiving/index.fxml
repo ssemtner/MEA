@@ -21,7 +21,7 @@
     <Pane layoutX="10.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="1004.0">
         <Rectangle arcHeight="50.0" arcWidth="20.0" fill="#423f3f" height="20.0" layoutX="900.0" layoutY="5.0" stroke="TRANSPARENT" strokeType="INSIDE" width="60.0" />
     </Pane>
-    <Pane fx:id="kitchen">
+    <Pane fx:id="kitchen" visible="false">
         <Rectangle fill="#bde07f" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
         <Label layoutX="40.0" layoutY="40.0" prefHeight="60.0" text="Kitchen">
             <font>
@@ -40,8 +40,8 @@
             </TilePane>
         </ScrollPane>
         <AnchorPane layoutX="35.0" layoutY="450.0">
-            <StackPane layoutX="14.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="220.0">
-                <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#e6e6f1" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="220.0">
+            <StackPane layoutX="14.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="280.0">
+                <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#e6e6f1" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="260.0">
                     <effect>
                         <DropShadow color="#535353" height="30.0" radius="14.5" width="30.0" />
                     </effect>
@@ -169,7 +169,7 @@
             </ImageView>
         </StackPane>
     </Pane>
-    <Pane fx:id="options" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0">
+    <Pane fx:id="options" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" visible="false">
         <Rectangle fill="#8286ea" height="60.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="1024.0" />
         <Label layoutX="40.0" layoutY="40.0" prefHeight="60.0" text="Options">
             <font>
@@ -210,7 +210,7 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                      <styleClass>
-                        <String fx:value="f4" />
+                        <String fx:value="f5" />
                         <String fx:value="b" />
                      </styleClass>
                   </Label>
@@ -258,7 +258,7 @@
          </children>
       </AnchorPane>
     </Pane>
-    <Pane fx:id="appliances" prefHeight="600.0" prefWidth="1024.0" visible="false">
+    <Pane fx:id="appliances" prefHeight="600.0" prefWidth="1024.0">
         <StackPane layoutX="40.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0">
             <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#f1f3f4" height="450.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="400.0">
                 <effect>
@@ -266,7 +266,7 @@
                 </effect>
             </Rectangle>
             <VBox>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="150.0" text="Lights">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="300.0" text="Lights">
                     <font>
                         <Font name="System Bold" size="36.0" />
                     </font>
@@ -296,7 +296,7 @@
         </Label>
         <AnchorPane layoutX="65.0" layoutY="505.0">
             <StackPane>
-                <Rectangle arcHeight="40.0" arcWidth="30.0" fill="#e6e6f1" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="120.0" />
+                <Rectangle arcHeight="40.0" arcWidth="30.0" fill="#e6e6f1" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="160.0" />
                 <Label text="ADD LIGHT">
                     <font>
                         <Font name="System Bold" size="18.0" />
@@ -315,7 +315,7 @@
                 </effect>
             </Rectangle>
             <VBox>
-                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="150.0" text="Blinds">
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="300.0" text="Blinds">
                     <font>
                         <Font name="System Bold" size="36.0" />
                     </font>
@@ -334,7 +334,7 @@
         </StackPane>
         <AnchorPane layoutX="515.0" layoutY="410.0" />
         <StackPane layoutX="610.0" layoutY="505.0">
-            <Rectangle arcHeight="40.0" arcWidth="30.0" fill="#e6e6f1" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="120.0" />
+            <Rectangle arcHeight="40.0" arcWidth="30.0" fill="#e6e6f1" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="160.0" />
             <Label text="ADD BLIND">
                 <font>
                     <Font name="System Bold" size="18.0" />
@@ -366,7 +366,7 @@
         </ScrollPane>
     </Pane>
     <Rectangle fx:id="home_button" arcHeight="60.0" arcWidth="30.0" fill="#e2ae35" height="40.0" layoutX="462.0" layoutY="540.0" onMouseEntered="#home" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
-    <Label fx:id="clock" layoutX="20.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="600.0" minHeight="-Infinity" prefHeight="20.0" prefWidth="300.0" styleClass="f8">
+    <Label fx:id="clock" layoutX="20.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="600.0" minHeight="-Infinity" prefHeight="20.0" prefWidth="400.0" styleClass="f8">
         <font>
             <Font name="System" size="16.0" />
         </font>
