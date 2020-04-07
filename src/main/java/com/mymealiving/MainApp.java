@@ -27,12 +27,12 @@ public class MainApp extends Application {
     }
 
     public static void main(String[] args) {
-//        Thread thread = new Thread(() -> {
-//            Server server = new Server(5050);
-//            server.start();
-//            server = null;
-//        });
-//        thread.start();
+        Thread thread = new Thread(() -> {
+            Server server = new Server(5050);
+            server.start();
+            server = null;
+        });
+        thread.start();
         launch(args);
     }
 

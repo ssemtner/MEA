@@ -71,8 +71,8 @@ public class Appliance {
         btn_txt.getStyleClass().add("f5");
         btn_txt.getStyleClass().add("b");
         btn_txt.setAlignment(Pos.CENTER);
-        btn_txt.setMaxWidth(120);
-        btn_txt.setMinWidth(120);
+        btn_txt.setMaxWidth(160);
+        btn_txt.setMinWidth(160);
         btn_txt.setMaxHeight(40);
         btn_txt.setMinHeight(40);
 
