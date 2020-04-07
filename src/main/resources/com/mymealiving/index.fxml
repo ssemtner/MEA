@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mymealiving.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mymealiving.Controller">
     <Pane layoutX="10.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="1004.0">
         <Rectangle arcHeight="50.0" arcWidth="20.0" fill="#423f3f" height="20.0" layoutX="900.0" layoutY="5.0" stroke="TRANSPARENT" strokeType="INSIDE" width="60.0" />
     </Pane>
@@ -182,7 +182,7 @@
         </Label>
         <VBox layoutX="50.0" layoutY="150.0" prefHeight="400.0" prefWidth="750.0">
             <HBox prefHeight="125.0" prefWidth="440.0">
-                <VBox prefHeight="100.0" prefWidth="325.0">
+                <VBox prefHeight="125.0" prefWidth="390.0">
                     <Label prefHeight="75.0" prefWidth="325.0" text="Font Size">
                         <font>
                             <Font name="System Bold" size="36.0" />
@@ -192,7 +192,7 @@
                      <String fx:value="b" />
                   </styleClass>
                     </Label>
-                    <Label prefHeight="60.0" prefWidth="325.0" text="Adjust the size of the text">
+                    <Label prefHeight="55.0" prefWidth="325.0" text="Adjust the size of the text">
                         <font>
                             <Font size="24.0" />
                         </font>
@@ -202,63 +202,61 @@
                   </styleClass>
                     </Label>
                 </VBox>
-            <StackPane onMouseEntered="#toggle_font_menu" prefHeight="150.0" prefWidth="200.0">
-               <children>
-                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e6e6f1" height="50.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
-                  <Label fx:id="font_label_a" text="Medium">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                     <styleClass>
-                        <String fx:value="f5" />
-                        <String fx:value="b" />
-                     </styleClass>
-                  </Label>
-               </children>
-            </StackPane>
+                <StackPane onMouseEntered="#toggle_font_menu" prefHeight="150.0" prefWidth="200.0">
+                    <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e6e6f1" height="50.0" stroke="BLACK"
+                               strokeType="INSIDE" width="150.0"/>
+                    <Label fx:id="font_label_a" text="Medium">
+                        <font>
+                            <Font name="System Bold" size="24.0"/>
+                        </font>
+                        <styleClass>
+                            <String fx:value="f5"/>
+                            <String fx:value="b"/>
+                        </styleClass>
+                    </Label>
+                </StackPane>
             </HBox>
         </VBox>
-      <AnchorPane fx:id="font_menu" layoutX="400.0" layoutY="230.0" prefHeight="150.0" prefWidth="150.0">
-         <children>
+        <AnchorPane fx:id="font_menu" layoutX="465.0" layoutY="230.0" prefHeight="150.0" prefWidth="150.0">
             <StackPane prefHeight="150.0" prefWidth="150.0">
-               <children>
-                  <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#e6e6f1" height="150.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
-                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" spacing="5.0">
-                     <children>
-                        <Label fx:id="font_label_b" alignment="CENTER" onMouseEntered="#font_select" prefHeight="35.0" prefWidth="150.0" text="Small">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="f5" />
-                              <String fx:value="b" />
-                           </styleClass>
-                           <padding>
-                              <Insets bottom="10.0" top="10.0" />
-                           </padding>
-                        </Label>
-                        <Label fx:id="font_label_c" alignment="CENTER" onMouseEntered="#font_select" prefHeight="35.0" prefWidth="150.0" text="Large">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="f5" />
-                              <String fx:value="b" />
-                           </styleClass>
-                           <padding>
-                              <Insets bottom="10.0" top="10.0" />
-                           </padding>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets top="15.0" />
-                     </padding></VBox>
-               </children>
+                <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#e6e6f1" height="150.0" stroke="BLACK"
+                           strokeType="INSIDE" width="150.0"/>
+                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                      prefHeight="150.0" prefWidth="150.0" spacing="5.0">
+                    <padding>
+                        <Insets top="15.0"/>
+                    </padding>
+                    <Label fx:id="font_label_b" alignment="CENTER" onMouseEntered="#font_select"
+                           prefHeight="35.0" prefWidth="150.0" text="Small">
+                        <font>
+                            <Font name="System Bold" size="24.0"/>
+                        </font>
+                        <styleClass>
+                            <String fx:value="f5"/>
+                            <String fx:value="b"/>
+                        </styleClass>
+                        <padding>
+                            <Insets bottom="10.0" top="10.0"/>
+                        </padding>
+                    </Label>
+                    <Label fx:id="font_label_c" alignment="CENTER" onMouseEntered="#font_select"
+                           prefHeight="35.0" prefWidth="150.0" text="Large">
+                        <font>
+                            <Font name="System Bold" size="24.0"/>
+                        </font>
+                        <styleClass>
+                            <String fx:value="f5"/>
+                            <String fx:value="b"/>
+                        </styleClass>
+                        <padding>
+                            <Insets bottom="10.0" top="10.0"/>
+                        </padding>
+                    </Label>
+                </VBox>
             </StackPane>
-         </children>
-      </AnchorPane>
+        </AnchorPane>
     </Pane>
-    <Pane fx:id="appliances" prefHeight="600.0" prefWidth="1024.0">
+    <Pane fx:id="appliances" prefHeight="600.0" prefWidth="1024.0" visible="false">
         <StackPane layoutX="40.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0">
             <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#f1f3f4" height="450.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="400.0">
                 <effect>
@@ -366,7 +364,7 @@
         </ScrollPane>
     </Pane>
     <Rectangle fx:id="home_button" arcHeight="60.0" arcWidth="30.0" fill="#e2ae35" height="40.0" layoutX="462.0" layoutY="540.0" onMouseEntered="#home" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
-    <Label fx:id="clock" layoutX="20.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="600.0" minHeight="-Infinity" prefHeight="20.0" prefWidth="400.0" styleClass="f8">
+    <Label fx:id="clock" layoutX="20.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="600.0" minHeight="-Infinity" prefHeight="31.0" prefWidth="400.0" styleClass="f8">
         <font>
             <Font name="System" size="16.0" />
         </font>

@@ -28,7 +28,7 @@ public class Door {
         DropShadow shadow = new DropShadow(BlurType.THREE_PASS_BOX, Color.web("535353"), 10, 0, 0, 0);
 
         Rectangle rect = new Rectangle();
-        rect.setWidth(500);
+        rect.setWidth(600);
         rect.setHeight(60);
         rect.setArcWidth(40);
         rect.setArcHeight(40);
@@ -52,13 +52,13 @@ public class Door {
         StackPane stackpane = new StackPane();
         stackpane.setOnMouseEntered(event -> Controller.toggle(event, "CLOSED", "F1935C", "OPEN", "B7472A"));
         stackpane.setPadding(new Insets(0, 0, 0, 80));
-        stackpane.setMaxWidth(130);
-        stackpane.setMinWidth(130);
+        stackpane.setMaxWidth(160);
+        stackpane.setMinWidth(160);
         stackpane.setMaxHeight(60);
         stackpane.setMinHeight(60);
 
         Rectangle btn = new Rectangle();
-        btn.setWidth(150);
+        btn.setWidth(180);
         btn.setHeight(50);
         btn.setArcWidth(40);
         btn.setArcHeight(40);

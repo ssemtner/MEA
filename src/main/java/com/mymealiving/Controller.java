@@ -190,7 +190,7 @@ public class Controller {
         danger.setMouseTransparent(true);
     }
 
-    public void toggle_font_menu(MouseEvent event) {
+    public void toggle_font_menu() {
         if (font_menu.isVisible()) {
             System.out.println();
             font_menu.setVisible(false);
@@ -228,6 +228,8 @@ public class Controller {
                 font_label_c.setText("Large");
         }
         robot.mouseMove(0, 0);
+
+        toggle_font_menu();
 
         String fontSize = font_label_a.getText().toLowerCase();
 

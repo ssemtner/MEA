@@ -20,15 +20,15 @@ public class Appliance {
 
     public StackPane getVisual() {
         StackPane root = new StackPane();
-        root.setMaxWidth(500);
-        root.setMinWidth(500);
+        root.setMaxWidth(520);
+        root.setMinWidth(520);
         root.setMaxHeight(60);
         root.setMinHeight(60);
 
         DropShadow shadow = new DropShadow(BlurType.THREE_PASS_BOX, Color.web("535353"), 10, 0, 0, 0);
 
         Rectangle rect = new Rectangle();
-        rect.setWidth(500);
+        rect.setWidth(520);
         rect.setHeight(60);
         rect.setArcWidth(40);
         rect.setArcHeight(40);
@@ -58,7 +58,7 @@ public class Appliance {
         stackpane.setMinHeight(60);
 
         Rectangle btn = new Rectangle();
-        btn.setWidth(150);
+        btn.setWidth(170);
         btn.setHeight(50);
         btn.setArcWidth(40);
         btn.setArcHeight(40);

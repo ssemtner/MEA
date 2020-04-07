@@ -41,7 +41,7 @@ public class Light {
         stackpane.setOnMouseEntered(event -> Controller.toggle(event, "ON", "#F1935C", "OFF", "#B7472A"));
 
         Rectangle rectangle = new Rectangle();
-        rectangle.setWidth(100);
+        rectangle.setWidth(110);
         rectangle.setHeight(40);
         rectangle.setFill(Color.web("f1935c"));
         rectangle.setArcWidth(40);
